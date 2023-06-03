@@ -31,7 +31,6 @@ while(totalEmphrs<MAX_HRS && totalWorkingDays<=NUM_OF_WORKING_DAYS){
     totalEmphrs +=empHrs;
     console.log(" Days :" + totalWorkingDays + " Emp Hours :" + empHrs);
 }
-// console.log(totalWorkingDays);
 let empWage = totalEmphrs * WAGE_PER_HR;
 console.log("EmpWage Is : " + empWage);
 
