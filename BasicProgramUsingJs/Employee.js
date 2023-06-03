@@ -8,8 +8,6 @@ let NUM_OF_WORKING_DAYS = 10;
 let MAX_HRS=100;
 let totalEmphrs=0;
 let totalWorkingDays=0;
-
-
 while(totalEmphrs<MAX_HRS && totalWorkingDays<=NUM_OF_WORKING_DAYS){
     totalWorkingDays++;
     let empCheck = Math.floor(Math.random() * 3);
