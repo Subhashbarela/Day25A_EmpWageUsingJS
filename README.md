@@ -1,1 +1,0 @@
-# Day25A_EmpWageUsingJS
