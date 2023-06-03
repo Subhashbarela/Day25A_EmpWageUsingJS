@@ -5,35 +5,32 @@ let PART_TIME_HR = 4;
 let WAGE_PER_HR = 20;
 let empHrs = 0;
 let NUM_OF_WORKING_DAYS = 10;
-let fullTime = 0;
-let partTime = 0;
-let Absent = 0;
+let MAX_HRS=100;
+let totalEmphrs=0;
+let totalWorkingDays=0;
 
-for (var i = 0; i < NUM_OF_WORKING_DAYS; i++) {
+
+while(totalEmphrs<MAX_HRS && totalWorkingDays<=NUM_OF_WORKING_DAYS){
+    totalWorkingDays++;
     let empCheck = Math.floor(Math.random() * 3);
-
     switch (empCheck) {
         case IS_FULL_TIME:
-            {
-                fullTime++;
+            {               
                 empHrs += FULL_TIME_HR;
                 break;
             }
         case IS_PART_TIME:
-            {
-                partTime++;
+            {               
                 empHrs += PART_TIME_HR;
                 break;
             }
-        default: console.log("Employee is absent");
-            Absent++;
+        default:          
             empHrs += 0;
             break;
     }
+    totalEmphrs +=empHrs;
 }
-let empWage = empHrs * WAGE_PER_HR;
-console.log("total full time : "+fullTime);
-console.log("total part time : "+partTime);
-console.log("total absent  : "+Absent);
+console.log(totalWorkingDays);
+let empWage = totalEmphrs * WAGE_PER_HR;
 console.log("EmpWage Is : " + empWage);
 
